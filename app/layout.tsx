@@ -1,6 +1,7 @@
-import NavBar from "./components/NavBar/nav-bar";
+import NavBar from "@/components/NavBar/nav-bar";
 import "./globals.css";
 import { Inter } from "next/font/google";
+import SideBar from "@/components/SideBar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,9 +17,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className="h-screen relative flex flex-col">
         <NavBar />
-        {children}
+        <section className="w-full flex flex-row">
+          <SideBar />
+          {children}
+        </section>
       </body>
     </html>
   );
