@@ -1,3 +1,5 @@
+"use client";
+
 import {
   IoIosAdd,
   IoIosQrScanner,
@@ -8,12 +10,18 @@ import {
 
 import { AiFillRedditCircle, AiOutlineMenu } from "react-icons/ai";
 import { LuMoreHorizontal } from "react-icons/lu";
+import { UseSideBarContext } from "@/app/context/SidebarContext";
+
 export default function NavBar() {
+  const { isOpen, setIsOpen } = UseSideBarContext();
   return (
-    <nav className="absolute w-screen top-0 flex flex-row bg-zinc-900">
+    <nav className="fixed w-screen top-0 flex flex-row bg-zinc-900">
       <div className=" flex flex-row w-full mx-2 px-3 bg-zinc-900 border-b-[1px] border-zinc-600">
         <div className="flex flex-row gap-3">
-          <AiOutlineMenu className="visible text-white text-[25px] my-auto xl:hidden" />
+          <AiOutlineMenu
+            className="visible text-white text-[25px] my-auto xl:hidden"
+            onClick={() => setIsOpen(!isOpen)}
+          />
           <AiFillRedditCircle className="bg-white rounded-full text-purple-700 text-[30px] my-auto" />
           <div className="invisible w-0 md:w-auto md:visible h-full">
             <span className="text-xl text-white my-auto">not</span>
