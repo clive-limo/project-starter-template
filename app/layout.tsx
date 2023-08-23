@@ -1,7 +1,8 @@
 import NavBar from "@/components/NavBar/nav-bar";
 import "./globals.css";
 import { Inter } from "next/font/google";
-import SideBar from "@/components/SideBar";
+import SideBar from "@/components/SideBar/side-bar";
+import { SideBarContextProvider } from "./context/SidebarContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,13 +18,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="h-screen relative flex flex-col">
+      <SideBarContextProvider>
         <NavBar />
-        <section className="w-full flex flex-row">
-          <SideBar />
-          {children}
-        </section>
-      </body>
+        <body className="mx-auto h-screen relative flex flex-col overflow-x-hidden 2xl:max-w-7xl">
+          <section className="w-full flex flex-row">
+            <SideBar />
+            {children}
+          </section>
+        </body>
+      </SideBarContextProvider>
     </html>
   );
 }
