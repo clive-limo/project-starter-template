@@ -22,13 +22,13 @@ export default function SideBar() {
   return (
     <section
       className={clsx(
-        "h-screen invisible w-0 bg-zinc-900 border-r-[1px] border-zinc-600 mt-14 pr-8 pl-4 py-2 flex flex-col overflow-y-auto lg:visible lg:w-72",
-        isOpen ? "visible w-72" : "invisible, w-0"
+        "h-screen z-10 bg-zinc-900 border-r-[1px] border-zinc-600 mt-14 lg:pr-8 lg:pl-4 py-2 flex flex-col overflow-y-auto lg:visible lg:w-72",
+        isOpen ? "md:visible w-96" : "invisible, w-0"
       )}
     >
       <div className="flex flex-row text-white px-2 py-1 hover:bg-zinc-700 rounded-r-lg mt-2">
         <LiaHomeSolid className="text-white text-3xl p-1" />
-        <Link href={""} className="text-sm my-auto font-light px-1">
+        <Link href="/" className="text-sm my-auto font-light px-1">
           Home
         </Link>
       </div>

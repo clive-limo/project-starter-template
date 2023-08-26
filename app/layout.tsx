@@ -19,8 +19,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <SideBarContextProvider>
-        <NavBar />
-        <body className="mx-auto h-screen relative flex flex-col overflow-x-hidden 2xl:max-w-7xl">
+        <body className="mx-auto h-screen relative flex flex-col bg-zinc-900 overflow-x-hidden 2xl:max-w-7xl">
+          <NavBar />
           <section className="w-full flex flex-row">
             <SideBar />
             {children}

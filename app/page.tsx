@@ -45,7 +45,7 @@ export default function Home() {
         <div className="flex-1 ">
           <Link
             href="/submit"
-            className="w-20 border-[1px] border-white text-white font-bold text-[12px] rounded-full mx-1 my-2 hover:bg-zinc-700 text-center py-1"
+            className="my-2 w-20 border-[1px] border-white text-white font-bold text-[12px] rounded-full px-1 hover:bg-zinc-700 text-center py-1"
           >
             Create Post
           </Link>
