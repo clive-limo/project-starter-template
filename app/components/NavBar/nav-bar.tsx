@@ -10,7 +10,7 @@ import { AiFillRedditCircle, AiOutlineMenu } from "react-icons/ai";
 import { LuMoreHorizontal } from "react-icons/lu";
 export default function NavBar() {
   return (
-    <nav className="flex flex-row bg-zinc-900 sticky top-0">
+    <section className="fixed w-screen z-20 top-0 flex flex-row bg-zinc-900">
       <div className=" flex flex-row w-full mx-2 px-3 bg-zinc-900 border-b-[1px] border-zinc-600">
         <div className="flex flex-row gap-3">
           <AiOutlineMenu className="visible text-white text-[25px] my-auto xl:hidden" />
@@ -39,6 +39,6 @@ export default function NavBar() {
           <LuMoreHorizontal className="text-white my-auto text-2xl" />
         </div>
       </div>
-    </nav>
+    </section>
   );
 }
