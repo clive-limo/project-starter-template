@@ -5,7 +5,7 @@ import {
   useContext,
   Dispatch,
   SetStateAction,
-  useState,
+  useState
 } from "react";
 
 interface ContextProps {
