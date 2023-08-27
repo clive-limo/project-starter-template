@@ -5,8 +5,7 @@ import {
   useContext,
   Dispatch,
   SetStateAction,
-  useState,
-  ReactElement,
+  useState
 } from "react";
 
 interface ContextProps {
